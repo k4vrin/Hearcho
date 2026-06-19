@@ -1,0 +1,4 @@
+[90m/Users/kavrin/Projects/Kavrin/Hearcho/core/src/commonMain/kotlin/dev/kavrin/hearcho/[0mGreetingUtil.kt[90m:[0m3[90m:35:[0m First line of body expression fits on same line as function signature [90m(standard:function-signature)[0m
+
+Summary error count (descending) by rule:
+  standard:function-signature: 1

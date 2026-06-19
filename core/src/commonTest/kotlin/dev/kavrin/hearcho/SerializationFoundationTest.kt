@@ -6,7 +6,6 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class SerializationFoundationTest {
-
     @Test
     fun serializableModelRoundTripsThroughJson() {
         val model = FoundationModel(value = "ready")
@@ -19,4 +18,6 @@ class SerializationFoundationTest {
 }
 
 @Serializable
-private data class FoundationModel(val value: String)
+private data class FoundationModel(
+    val value: String,
+)

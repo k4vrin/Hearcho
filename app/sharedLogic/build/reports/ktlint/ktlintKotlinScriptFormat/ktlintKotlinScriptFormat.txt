@@ -1,0 +1,17 @@
+[90m/Users/kavrin/Projects/Kavrin/Hearcho/app/sharedLogic/[0mbuild.gradle.kts[90m:[0m11[90m:28:[0m Missing trailing comma before ")" [90m(standard:trailing-comma-on-call-site)[0m
+[90m/Users/kavrin/Projects/Kavrin/Hearcho/app/sharedLogic/[0mbuild.gradle.kts[90m:[0m20[90m:23:[0m A multiline expression should start on a new line [90m(standard:multiline-expression-wrapping)[0m
+[90m/Users/kavrin/Projects/Kavrin/Hearcho/app/sharedLogic/[0mbuild.gradle.kts[90m:[0m20[90m:54:[0m Expected newline before '.' [90m(standard:chain-method-continuation)[0m
+[90m/Users/kavrin/Projects/Kavrin/Hearcho/app/sharedLogic/[0mbuild.gradle.kts[90m:[0m20[90m:68:[0m Unexpected indentation (12) (should be 16) [90m(standard:indent)[0m
+[90m/Users/kavrin/Projects/Kavrin/Hearcho/app/sharedLogic/[0mbuild.gradle.kts[90m:[0m21[90m:5:[0m Expected newline before '.' [90m(standard:chain-method-continuation)[0m
+[90m/Users/kavrin/Projects/Kavrin/Hearcho/app/sharedLogic/[0mbuild.gradle.kts[90m:[0m21[90m:23:[0m Unexpected indentation (12) (should be 16) [90m(standard:indent)[0m
+[90m/Users/kavrin/Projects/Kavrin/Hearcho/app/sharedLogic/[0mbuild.gradle.kts[90m:[0m21[90m:57:[0m A multiline expression should start on a new line [90m(standard:multiline-expression-wrapping)[0m
+[90m/Users/kavrin/Projects/Kavrin/Hearcho/app/sharedLogic/[0mbuild.gradle.kts[90m:[0m23[90m:11:[0m Expected newline before '.' [90m(standard:chain-method-continuation)[0m
+[90m/Users/kavrin/Projects/Kavrin/Hearcho/app/sharedLogic/[0mbuild.gradle.kts[90m:[0m24[90m:4:[0m Expected newline before '.' [90m(standard:chain-method-continuation)[0m
+[90m/Users/kavrin/Projects/Kavrin/Hearcho/app/sharedLogic/[0mbuild.gradle.kts[90m:[0m24[90m:19:[0m Unexpected indentation (12) (should be 16) [90m(standard:indent)[0m
+[90m/Users/kavrin/Projects/Kavrin/Hearcho/app/sharedLogic/[0mbuild.gradle.kts[90m:[0m25[90m:1:[0m Unexpected indentation (12) (should be 16) [90m(standard:indent)[0m
+
+Summary error count (descending) by rule:
+  standard:chain-method-continuation: 4
+  standard:indent: 4
+  standard:multiline-expression-wrapping: 2
+  standard:trailing-comma-on-call-site: 1

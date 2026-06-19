@@ -33,20 +33,20 @@ This roadmap is organized as phases, workstreams, tasks, and atomic subtasks. Ev
   - [x] Add kotlinx-coroutines-test to shared test source sets.
   - [x] Add Turbine to `app/sharedLogic/commonTest`.
 
-- [ ] Task 0.F3: Configure code quality.
-  - [ ] Add ktlint or Spotless plugin alias.
-  - [ ] Configure formatting for all Kotlin modules.
-  - [ ] Add a formatting check command to `docs/PROJECT_CONTEXT.md`.
-  - [ ] Add Detekt plugin alias.
-  - [ ] Configure Detekt for production Kotlin source sets.
+- [x] Task 0.F3: Configure code quality.
+  - [x] Add ktlint or Spotless plugin alias.
+  - [x] Configure formatting for all Kotlin modules.
+  - [x] Add a formatting check command to `docs/PROJECT_CONTEXT.md`.
+  - [x] Add Detekt plugin alias.
+  - [x] Configure Detekt for production Kotlin source sets.
 
-- [ ] Task 0.F4: Provision local infrastructure.
-  - [ ] Add `.env.example` with non-secret server keys.
-  - [ ] Add Docker Compose with PostgreSQL service.
-  - [ ] Add Redis service to Docker Compose.
-  - [ ] Add RabbitMQ service and management UI to Docker Compose.
-  - [ ] Add health checks for all local services.
-  - [ ] Document local service ports.
+- [x] Task 0.F4: Provision local infrastructure.
+  - [x] Add `.env.example` with non-secret server keys.
+  - [x] Add Docker Compose with PostgreSQL service.
+  - [x] Add Redis service to Docker Compose.
+  - [x] Add RabbitMQ service and management UI to Docker Compose.
+  - [x] Add health checks for all local services.
+  - [x] Document local service ports.
 
 - [ ] Task 0.F5: Set up scoped Arrow foundations.
   - [ ] Select one Arrow version compatible with Kotlin 2.4.0 and all configured KMP targets.

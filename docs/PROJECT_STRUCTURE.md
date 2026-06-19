@@ -17,6 +17,8 @@ Hearcho/
 │   └── adr/
 ├── gradle/
 │   └── libs.versions.toml
+├── .env.example           # Local infrastructure and server configuration template
+├── docker-compose.yml     # PostgreSQL, Redis, and RabbitMQ development stack
 ├── build.gradle.kts
 ├── settings.gradle.kts
 ├── gradle.properties

@@ -1,3 +1,5 @@
+@file:Suppress("MatchingDeclarationName")
+
 package dev.kavrin.hearcho
 
 import android.os.Build

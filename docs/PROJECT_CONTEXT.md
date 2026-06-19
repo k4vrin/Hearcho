@@ -84,6 +84,8 @@ Not implemented:
 ## Validation Commands
 
 ```bash
+./gradlew ktlintCheck
+./gradlew detekt
 ./gradlew :core:allTests
 ./gradlew :app:sharedLogic:allTests
 ./gradlew :app:sharedUI:testAndroidHostTest
@@ -92,6 +94,19 @@ Not implemented:
 ```
 
 Build `app/iosApp/iosApp.xcodeproj` after changes to `SharedLogic`, Swift bridges, iOS configuration, or native SDKs.
+
+## Local Infrastructure
+
+Copy `.env.example` to `.env`, replace its local-only password placeholders, then start the dependencies with `docker compose up -d`. Verify their readiness with `docker compose ps`; each service exposes a Docker health check.
+
+| Service | Host port | Purpose |
+| --- | --- | --- |
+| PostgreSQL | `5432` (`POSTGRES_PORT`) | Authoritative relational data. |
+| Redis | `6379` (`REDIS_PORT`) | Disposable cache and presence state. |
+| RabbitMQ AMQP | `5672` (`RABBITMQ_AMQP_PORT`) | Application messaging. |
+| RabbitMQ Management | `15672` (`RABBITMQ_MANAGEMENT_PORT`) | Local RabbitMQ administration UI. |
+
+Use `docker compose down` to stop the stack. Add `-v` only when intentionally discarding all local infrastructure data.
 
 ## Avoid
 

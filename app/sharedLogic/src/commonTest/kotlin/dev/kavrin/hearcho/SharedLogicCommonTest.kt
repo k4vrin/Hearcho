@@ -7,13 +7,13 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class SharedLogicCommonTest {
-
     @Test
-    fun flowCanBeTestedWithTurbine() = runTest {
-        flowOf("loading", "ready").test {
-            assertEquals("loading", awaitItem())
-            assertEquals("ready", awaitItem())
-            awaitComplete()
+    fun flowCanBeTestedWithTurbine() =
+        runTest {
+            flowOf("loading", "ready").test {
+                assertEquals("loading", awaitItem())
+                assertEquals("ready", awaitItem())
+                awaitComplete()
+            }
         }
-    }
 }

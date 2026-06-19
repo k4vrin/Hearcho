@@ -1,0 +1,4 @@
+[90m/Users/kavrin/Projects/Kavrin/Hearcho/app/sharedLogic/src/commonMain/kotlin/dev/kavrin/hearcho/[0mGreeting.kt[90m:[0m6[90m:25:[0m Function body should be replaced with body expression [90m(standard:function-expression-body)[0m
+
+Summary error count (descending) by rule:
+  standard:function-expression-body: 1

@@ -1,0 +1,4 @@
+[90m/Users/kavrin/Projects/Kavrin/Hearcho/app/sharedUI/src/commonTest/kotlin/dev/kavrin/hearcho/[0mSharedUICommonTest.kt[90m:[0m7[90m:1:[0m Class body should not start with blank line [90m(standard:no-empty-first-line-in-class-body)[0m
+
+Summary error count (descending) by rule:
+  standard:no-empty-first-line-in-class-body: 1
