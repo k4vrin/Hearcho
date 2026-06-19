@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dev.kavrin.hearcho.sharedLogic.test" >
+
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="36" />
+
+    <instrumentation
+        android:name="androidx.test.runner.AndroidJUnitRunner"
+        android:label="Tests for dev.kavrin.hearcho.sharedLogic.test"
+        android:targetPackage="dev.kavrin.hearcho.sharedLogic.test" />
+
+    <application android:debuggable="true" />
+
+</manifest>
