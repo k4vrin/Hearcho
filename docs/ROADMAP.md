@@ -49,17 +49,22 @@ This roadmap is organized as phases, workstreams, tasks, and atomic subtasks. Ev
   - [x] Document local service ports.
 
 - [ ] Task 0.F5: Set up scoped Arrow foundations.
-  - [ ] Select one Arrow version compatible with Kotlin 2.4.0 and all configured KMP targets.
-  - [ ] Add the Arrow version and library aliases to `gradle/libs.versions.toml`.
-  - [ ] Add `arrow-core` to `core/commonMain` for `Either`, `Raise`, and `NonEmptyList`.
-  - [ ] Add `arrow-core` to `app/sharedLogic/commonMain` when shared client APIs consume Arrow types.
-  - [ ] Add `arrow-fx-coroutines` to `app/sharedLogic/commonMain` for `parZip`.
-  - [ ] Add Arrow dependencies to `server` only where Ktor application services consume shared Arrow outcomes.
-  - [ ] Add the Arrow Optics plugin and runtime dependency to the modules that declare optic-enabled models.
-  - [ ] Configure Optics code generation for KMP common source sets.
-  - [ ] Add common compile-smoke tests for `Either`, `Raise`, `NonEmptyList`, Optics, and `parZip`.
+    - [x] Select one Arrow version compatible with Kotlin 2.4.0 and all configured KMP targets.
+    - [x] Add the Arrow version and library aliases to `gradle/libs.versions.toml`.
+    - [x] Add `arrow-core` to `core/commonMain` for `Either`, `Raise`, and `NonEmptyList`.
+    - [x] Add `arrow-core` to `app/sharedLogic/commonMain` when shared client APIs consume Arrow
+      types.
+    - [x] Add `arrow-fx-coroutines` to `app/sharedLogic/commonMain` for `parZip`.
+    - [x] Add Arrow dependencies to `server` only where Ktor application services consume shared
+      Arrow outcomes.
+    - [x] Add the Arrow Optics plugin and runtime dependency to the modules that declare
+      optic-enabled models.
+    - [x] Configure Optics code generation for KMP common source sets.
+    - [x] Add common compile-smoke tests for `Either`, `Raise`, `NonEmptyList`, Optics, and
+      `parZip`.
   - [ ] Verify Android, iOS simulator, JVM/core, and server compilation with Arrow enabled.
-  - [ ] Document approved Arrow usage and prohibit provider SDK types from entering Arrow-based domain APIs.
+    - [x] Document approved Arrow usage and prohibit provider SDK types from entering Arrow-based
+      domain APIs.
 
 ### Server
 

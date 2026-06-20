@@ -1,5 +1,0 @@
-dev.kavrin.hearcho.sharedLogic.test.sharedLogic-mergeAndroidHostTestResources-0 /Users/kavrin/Projects/Kavrin/Hearcho/app/sharedLogic/build/intermediates/incremental/androidHostTest/mergeAndroidHostTestResources/merged.dir
-dev.kavrin.hearcho.sharedLogic.test.sharedLogic-mergeAndroidHostTestResources-1 /Users/kavrin/Projects/Kavrin/Hearcho/app/sharedLogic/build/intermediates/incremental/androidHostTest/mergeAndroidHostTestResources/stripped.dir
-dev.kavrin.hearcho.sharedLogic.test.sharedLogic-androidHostTest-2 /Users/kavrin/Projects/Kavrin/Hearcho/app/sharedLogic/build/intermediates/merged_res/androidHostTest/mergeAndroidHostTestResources
-dev.kavrin.hearcho.sharedLogic.test.sharedLogic-packageAndroidMainResources-3 /Users/kavrin/Projects/Kavrin/Hearcho/app/sharedLogic/build/intermediates/packaged_res/androidMain/packageAndroidMainResources/res
-dev.kavrin.hearcho.sharedLogic.test.sharedLogic-packageAndroidMainResources-4 /Users/kavrin/Projects/Kavrin/Hearcho/core/build/intermediates/packaged_res/androidMain/packageAndroidMainResources/res

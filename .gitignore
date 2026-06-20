@@ -1,2 +1,28 @@
+# Local environment and machine configuration
 .env
 !.env.example
+local.properties
+
+# Gradle and Kotlin build state
+.gradle/
+.kotlin/
+**/build/
+
+# Android native build output
+.cxx/
+.externalNativeBuild/
+captures/
+
+# IDE state
+.idea/
+*.iml
+
+# Xcode user and generated dependency state
+**/xcuserdata/
+**/*.xcuserstate
+**/DerivedData/
+**/Pods/
+**/.swiftpm/
+
+# OS metadata
+.DS_Store

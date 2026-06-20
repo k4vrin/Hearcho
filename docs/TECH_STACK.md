@@ -33,42 +33,43 @@ Important consequences:
 
 Source of truth: [`gradle/libs.versions.toml`](../gradle/libs.versions.toml).
 
-| Technology | Version | Status |
-| --- | --- | --- |
-| Kotlin | 2.4.0 | Active |
-| Android Gradle Plugin | 9.0.1 | Active |
-| Compose Multiplatform | 1.11.1 | Active |
-| Compose Material 3 | 1.11.0-alpha07 | Active; reassess before release |
-| Ktor | 3.5.0 | Active |
-| kotlinx.coroutines | 1.11.0 | Active in `app/sharedLogic`; test support in shared modules |
-| kotlinx.serialization JSON | 1.11.0 | Active in `core` |
-| Turbine | 1.2.1 | Active in `app/sharedLogic/commonTest` |
-| Android compile/target SDK | 36 | Active |
-| Android minimum SDK | 24 | Active |
-| JVM bytecode target | 11 | Active |
-| Logback | 1.5.34 | Active on server |
+| Technology                            | Version        | Status                                                      |
+|---------------------------------------|----------------|-------------------------------------------------------------|
+| Kotlin                                | 2.4.0          | Active                                                      |
+| Android Gradle Plugin                 | 9.0.1          | Active                                                      |
+| Arrow Core, Fx Coroutines, and Optics | 2.2.3          | Active foundation in `core` and `app/sharedLogic`           |
+| Compose Multiplatform                 | 1.11.1         | Active                                                      |
+| Compose Material 3                    | 1.11.0-alpha07 | Active; reassess before release                             |
+| Ktor                                  | 3.5.0          | Active                                                      |
+| kotlinx.coroutines                    | 1.11.0         | Active in `app/sharedLogic`; test support in shared modules |
+| kotlinx.serialization JSON            | 1.11.0         | Active in `core`                                            |
+| Turbine                               | 1.2.1          | Active in `app/sharedLogic/commonTest`                      |
+| Android compile/target SDK            | 36             | Active                                                      |
+| Android minimum SDK                   | 24             | Active                                                      |
+| JVM bytecode target                   | 11             | Active                                                      |
+| Logback                               | 1.5.34         | Active on server                                            |
 
 Do not upgrade versions as part of feature work. Dependency upgrades require a dedicated change that builds Android, shared KMP targets, iOS framework linkage, and server tests.
 
 ## Finalized Client Stack
 
-| Concern | Choice | Status | Placement |
-| --- | --- | --- | --- |
-| Language and sharing | Kotlin Multiplatform | Active | `core`, `app/sharedLogic` |
-| Async/state | kotlinx.coroutines + `Flow`/`StateFlow` | Active foundation | `app/sharedLogic`; expand when first consumers are added |
-| Serialization | kotlinx.serialization JSON | Active foundation | `core`; expand to clients/server with transport setup |
-| HTTP/WebSocket client | Ktor Client | Committed | `app/sharedLogic` with Darwin/OkHttp engines |
-| Dependency injection | Koin | Committed | Shared definitions; native host startup modules |
-| Navigation/lifecycle | Decompose + Essenty | Committed | `app/sharedLogic`; native hosts adapt components |
-| Feature state | Immutable state + actions + pure reducers over `StateFlow` | Committed | `app/sharedLogic` |
-| Typed outcomes and validation | Arrow `Either`, `Raise`, `NonEmptyList` | Committed, scoped | `core`, shared application logic, selected server services |
-| Immutable model updates | Arrow Optics | Committed, selective | Models with repeated nested immutable updates only |
-| Parallel composition | Arrow Fx Coroutines `parZip` | Committed, selective | Independent shared-client/server suspend operations |
-| Local relational cache | SQLDelight | Committed | `app/sharedLogic` with Android/iOS drivers |
-| Preferences | Multiplatform Settings | Committed | `app/sharedLogic`; never store raw secrets unprotected |
-| Android UI | Compose Material 3 | Active | `app/sharedUI`, `app/androidApp` |
-| iOS UI | SwiftUI | Active | `app/iosApp` |
-| Tests | kotlin-test, kotlinx-coroutines-test, Turbine | Active foundation | `core/commonTest`, `app/sharedLogic/commonTest` |
+| Concern                       | Choice                                                     | Status            | Placement                                                                      |
+|-------------------------------|------------------------------------------------------------|-------------------|--------------------------------------------------------------------------------|
+| Language and sharing          | Kotlin Multiplatform                                       | Active            | `core`, `app/sharedLogic`                                                      |
+| Async/state                   | kotlinx.coroutines + `Flow`/`StateFlow`                    | Active foundation | `app/sharedLogic`; expand when first consumers are added                       |
+| Serialization                 | kotlinx.serialization JSON                                 | Active foundation | `core`; expand to clients/server with transport setup                          |
+| HTTP/WebSocket client         | Ktor Client                                                | Committed         | `app/sharedLogic` with Darwin/OkHttp engines                                   |
+| Dependency injection          | Koin                                                       | Committed         | Shared definitions; native host startup modules                                |
+| Navigation/lifecycle          | Decompose + Essenty                                        | Committed         | `app/sharedLogic`; native hosts adapt components                               |
+| Feature state                 | Immutable state + actions + pure reducers over `StateFlow` | Committed         | `app/sharedLogic`                                                              |
+| Typed outcomes and validation | Arrow `Either`, `Raise`, `NonEmptyList`                    | Active, scoped    | `core`, shared application logic, selected server services when first consumed |
+| Immutable model updates       | Arrow Optics                                               | Active, selective | `core` models with repeated nested immutable updates only                      |
+| Parallel composition          | Arrow Fx Coroutines `parZip`                               | Active, selective | Independent shared-client suspend operations                                   |
+| Local relational cache        | SQLDelight                                                 | Committed         | `app/sharedLogic` with Android/iOS drivers                                     |
+| Preferences                   | Multiplatform Settings                                     | Committed         | `app/sharedLogic`; never store raw secrets unprotected                         |
+| Android UI                    | Compose Material 3                                         | Active            | `app/sharedUI`, `app/androidApp`                                               |
+| iOS UI                        | SwiftUI                                                    | Active            | `app/iosApp`                                                                   |
+| Tests                         | kotlin-test, kotlinx-coroutines-test, Turbine              | Active foundation | `core/commonTest`, `app/sharedLogic/commonTest`                                |
 
 ### Deliberate exclusions
 

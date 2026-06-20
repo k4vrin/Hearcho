@@ -1,4 +1,0 @@
-dev.kavrin.hearcho.core.test.core-mergeAndroidHostTestResources-0 /Users/kavrin/Projects/Kavrin/Hearcho/core/build/intermediates/incremental/androidHostTest/mergeAndroidHostTestResources/merged.dir
-dev.kavrin.hearcho.core.test.core-mergeAndroidHostTestResources-1 /Users/kavrin/Projects/Kavrin/Hearcho/core/build/intermediates/incremental/androidHostTest/mergeAndroidHostTestResources/stripped.dir
-dev.kavrin.hearcho.core.test.core-androidHostTest-2 /Users/kavrin/Projects/Kavrin/Hearcho/core/build/intermediates/merged_res/androidHostTest/mergeAndroidHostTestResources
-dev.kavrin.hearcho.core.test.core-packageAndroidMainResources-3 /Users/kavrin/Projects/Kavrin/Hearcho/core/build/intermediates/packaged_res/androidMain/packageAndroidMainResources/res

@@ -32,13 +32,14 @@ Implemented:
 - Module and source-set scaffold.
 - Generated placeholder Kotlin, Compose, SwiftUI, and Ktor code.
 - Version catalog with Kotlin, AGP, Compose, Ktor, AndroidX, and Logback.
+- Scoped Arrow Core, Fx Coroutines, and Optics foundations with common-source compile smoke tests.
 - Product, architecture, stack, roadmap, structure, and ADR documents.
 
 Not implemented:
 
 - Authentication, rooms, realtime contracts, moderation, or notifications.
 - PostgreSQL, Redis, RabbitMQ, Exposed, Flyway, or HikariCP.
-- Ktor Client, Koin, Decompose, SQLDelight, Multiplatform Settings, or Arrow.
+- Ktor Client, Koin, Decompose, SQLDelight, or Multiplatform Settings.
 - LiveKit adapters or provider-neutral voice ports.
 
 ## Finalized Stack Rules
@@ -66,6 +67,8 @@ Not implemented:
 - Use sealed domain errors and states; avoid `!!`.
 - Keep failures project-owned when using Arrow; `Either` and `Raise` express outcomes but do not define product error semantics.
 - Use `NonEmptyList` when failure collections must be non-empty, Optics for justified nested immutable updates, and `parZip` only for independent suspend operations.
+- Keep Arrow out of HTTP/WebSocket wire formats, Compose/SwiftUI state, and voice-provider SDK
+  boundaries; use Hearcho-owned failure types at domain and application boundaries.
 - Use structured coroutine scopes and cancel them with component lifecycle.
 - Use `suspend` for operations and `StateFlow` for observable state.
 - Keep transport DTOs separate from UI state.

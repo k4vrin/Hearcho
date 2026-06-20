@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidMultiplatformLibrary)
+    alias(libs.plugins.arrowOptics)
     alias(libs.plugins.kotlinSerialization)
 }
 
@@ -35,6 +36,8 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
+            implementation(libs.arrow.core)
+            implementation(libs.arrow.optics)
             implementation(libs.kotlinx.serialization.json)
         }
         commonTest.dependencies {

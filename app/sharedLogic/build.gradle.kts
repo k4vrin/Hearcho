@@ -40,6 +40,8 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             api(projects.core)
+            implementation(libs.arrow.core)
+            implementation(libs.arrow.fxCoroutines)
             implementation(libs.kotlinx.coroutines.core)
         }
         commonTest.dependencies {
