@@ -1,20 +1,18 @@
-package dev.kavrin.hearcho
+package dev.kavrin.hearcho.bootstrap
 
-import dev.kavrin.hearcho.bootstrap.AppEnvironment
-import dev.kavrin.hearcho.bootstrap.ServerConfig
+import io.ktor.client.call.body
 import io.ktor.client.request.get
-import io.ktor.client.statement.bodyAsText
 import io.ktor.http.HttpStatusCode
 import io.ktor.server.testing.testApplication
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-class ApplicationTest {
+class HealthRoutesTest {
     @Test
-    fun `module wires diagnostic route through bootstrap`() =
+    fun `live health endpoint returns ok`() =
         testApplication {
             application {
-                module(
+                configureServer(
                     config =
                         ServerConfig(
                             host = "127.0.0.1",
@@ -24,9 +22,9 @@ class ApplicationTest {
                 )
             }
 
-            val response = client.get("/diagnostic/server")
+            val response = client.get("/health/live")
 
             assertEquals(HttpStatusCode.OK, response.status)
-            assertEquals("hearcho-server-test", response.bodyAsText())
+            assertEquals("", response.body<String>())
         }
 }

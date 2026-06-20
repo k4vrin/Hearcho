@@ -1,22 +1,24 @@
 package dev.kavrin.hearcho
 
+import dev.kavrin.hearcho.bootstrap.ServerConfig
+import dev.kavrin.hearcho.bootstrap.ServerConfigLoader
+import dev.kavrin.hearcho.bootstrap.configureServer
 import io.ktor.server.application.Application
-import io.ktor.server.application.call
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
-import io.ktor.server.response.respondText
-import io.ktor.server.routing.get
-import io.ktor.server.routing.routing
 
 fun main() {
-    embeddedServer(Netty, port = 8080, host = "0.0.0.0", module = Application::module)
-        .start(wait = true)
+    val config = ServerConfigLoader.load()
+    embeddedServer(
+        Netty,
+        port = config.port,
+        host = config.host,
+        module = {
+            module(config)
+        },
+    ).start(wait = true)
 }
 
-fun Application.module() {
-    routing {
-        get("/") {
-            call.respondText(sayHello("Ktor"))
-        }
-    }
+fun Application.module(config: ServerConfig = ServerConfigLoader.load()) {
+    configureServer(config)
 }

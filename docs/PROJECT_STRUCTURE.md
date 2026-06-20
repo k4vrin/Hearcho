@@ -127,9 +127,17 @@ Owns provider-neutral domain identifiers, value objects, validation, API DTOs, r
 ```text
 server/src/
 ├── main/
-│   ├── kotlin/dev/kavrin/hearcho/Application.kt
+│   ├── kotlin/dev/kavrin/hearcho/
+│   │   ├── Application.kt
+│   │   ├── bootstrap/
+│   │   └── diagnostic/
 │   └── resources/logback.xml
-└── test/kotlin/dev/kavrin/hearcho/ApplicationTest.kt
+└── test/kotlin/dev/kavrin/hearcho/
+    ├── ApplicationTest.kt
+    ├── README.md
+    ├── bootstrap/
+    ├── diagnostic/
+    └── testfixture/
 ```
 
 The server is Ktor on JVM, not Spring Boot. It owns routes, authentication, application services, Exposed repositories, Flyway migrations, Redis presence, RabbitMQ workers/outbox publishing, OpenTelemetry, and provider adapters such as `LiveKitVoiceTokenProvider`.
