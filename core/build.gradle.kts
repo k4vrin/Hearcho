@@ -1,3 +1,4 @@
+import arrow.optics.plugin.arrowOpticsCommon
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -8,6 +9,8 @@ plugins {
 }
 
 kotlin {
+    arrowOpticsCommon()
+
     iosArm64()
     iosSimulatorArm64()
     jvm()
